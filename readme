@@ -1,0 +1,67 @@
+
+Project Readme
+
+API KEY SETUP
+
+Alpha Vantage API Key Setup
+This project uses the Alpha Vantage API to fetch stock market data. You need to set up an API key to use their services. Here's how you can do it:
+
+Sign Up: Go to the Alpha Vantage website and sign up for an API key. They offer both free and premium services. For extensive usage and higher data limits, consider subscribing to their premium service.
+
+API Key: Once you have signed up, you will receive an API key.
+
+Setting Up the API Key:
+
+Open the script where the API key is required (e.g., preprocess.py).
+Look for the line where the API key is set (e.g., api_key = 'YOUR_API_KEY').
+Replace 'YOUR_API_KEY' with the actual API key you received from Alpha Vantage.
+Premium Service: If you are using the premium service, ensure that you configure the API key to access premium endpoints if needed.
+
+Environment Variable (Optional): For better security, you can set the API key as an environment variable instead of hardcoding it in the script. Add the following line to your script to read the API key from an environment variable:
+
+python
+Copy code
+import os
+api_key = os.getenv('ALPHA_VANTAGE_API_KEY')
+Then, set the environment variable in your system:
+
+bash
+Copy code
+export ALPHA_VANTAGE_API_KEY='your_actual_api_key'
+
+
+Environment Setup
+1. Ensure you have Python 3.x installed.
+2. Install the required libraries using the following command:
+
+   pip install -r requirements.txt
+
+3. Ensure you have Jupyter Notebook installed if you want to run the .ipynb files:
+
+   pip install notebook
+
+
+Steps to Get Results
+1. Run the preprocessing script:
+
+   python preprocess.py
+
+2. Run the cleaning script:
+
+   python cleaning.py
+
+3. Open the exploration and visualization notebook and run all cells:
+
+   jupyter notebook exploring_and_visualization.ipynb
+
+4. For each approach, run the corresponding scripts in the directories `approach1` and `approach2`.
+5. Run the baseline scripts in the `baseline` directory.
+6. Review the results and analysis.
+
+Directory Structure
+- `preprocess.py`: Contains the preprocessing code.
+- `cleaning.py`: Contains the cleaning code.
+- `exploring_and_visualization.ipynb`: Contains the exploration and visualization code.
+- `approach1/`: Contains the code for the first approach.
+- `approach2/`: Contains the code for the second approach.
+- `baseline/`: Contains the code for the baseline model.
